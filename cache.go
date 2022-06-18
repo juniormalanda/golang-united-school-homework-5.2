@@ -14,7 +14,7 @@ func (d *cacheDeadline) expired() bool {
 
 	now := time.Now()
 
-	return !now.After(d.till)
+	return now.After(d.till)
 }
 
 type cacheItem struct {
